@@ -9,3 +9,5 @@ MySQL Database Integration: Stores and retrieves food item data for accurate nut
 Technologies Used
 Python: Backend logic and GUI implementation using Tkinter.
 MySQL: Database management for storing food item details.
+
+Run the xyz.py file first to start the execution.
