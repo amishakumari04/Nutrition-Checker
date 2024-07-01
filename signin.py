@@ -23,7 +23,7 @@ def signUp():
      if(fname == "" or contact == "" or email == "" or user=="" or password==""):
          MessageBox.showinfo("ALERT", "Please enter all required(*) fields")
      else:
-         con = mysql.connect(host="localhost", user="root", password="Amisha@123", database="diet")
+         con = mysql.connect(host="localhost", user="root", password="password", database="diet")
          cursor = con.cursor()
          cursor.execute("INSERT INTO user_info VALUES ('"+fname+"','"+contact+"','"+email+"','"+gender+"','"+weight+"','"+height+"','"+user+"','"+password+"')")
         #  ('FIRST NAME', 'CONTACT', 'EMAIL', 'GENDER', 'WEIGHT', 'HEIGHT', 'USERNAME', 'PASSWORD')
