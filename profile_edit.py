@@ -17,7 +17,7 @@ def profile1(username):
 
    def show(username):
 
-      con = mysql.connect(host="localhost", user="root", password="Amisha@123", database="diet",auth_plugin='mysql_native_password')
+      con = mysql.connect(host="localhost", user="root", password="password", database="diet",auth_plugin='mysql_native_password')
       cursor = con.cursor()
       cursor.execute("select * from user_info where USERNAME= '"+username +"'")
       rows = cursor.fetchall()
@@ -47,7 +47,7 @@ def profile1(username):
     if(fname == "" or contact == "" or email==""):
         MessageBox.showinfo("ALERT", "These fields are required to update!")
     else:
-        con = mysql.connect(host="localhost", user="root", password="Amisha@123", database="diet")
+        con = mysql.connect(host="localhost", user="root", password="password", database="diet")
         cursor = con.cursor()
         cursor.execute("update user_info set FIRSTNAME = '"+ fname +"', CONTACT='"+ contact +"',EMAIL='"+email+"',GENDER='"+gender+"',WEIGHT='"+weight+"',HEIGHT='"+height+"' where USERNAME ='"+ username +"'")
         cursor.execute("commit");
@@ -56,7 +56,7 @@ def profile1(username):
         con.close();
    
    def delete():
-        con = mysql.connect(host="localhost", user="root", password="Amisha@123", database="diet")
+        con = mysql.connect(host="localhost", user="root", password="password", database="diet")
         cursor = con.cursor()
         cursor.execute("delete from user_info where USERNAME='"+ username +"'")
         cursor.execute("commit");
