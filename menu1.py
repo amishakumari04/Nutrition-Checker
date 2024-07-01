@@ -37,7 +37,7 @@ def diet(username):
       if(food_entry.get() == ""):
           MessageBox.showinfo("ALERT","Food name is required to know the nutrient content!")
       else:
-          con = mysql.connect(host="localhost", user="root", password="Amisha@123", database="diet")
+          con = mysql.connect(host="localhost", user="root", password="password", database="diet")
           cursor = con.cursor()
           cursor.execute("select * from food_chart where food= '" + food_entry.get() +"'")
           rows = cursor.fetchall()
