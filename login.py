@@ -16,7 +16,7 @@ def login_page():
         if(user_entry.get() == "" or password_entry.get()==""):
             MessageBox.showinfo("ALERT","Username and password is required for login !")
         else:
-            con = mysql.connect(host="localhost", user="root", password="Amisha@123", database="diet")
+            con = mysql.connect(host="localhost", user="root", password="password", database="diet")
             cursor = con.cursor()
             # cursor.execute("SELECT * FROM user_info WHERE USERNAME='"+user_entry.get()+"' and PASSWORD='"+password_entry.get()+"'")
             # db=cursor.fetchall()
